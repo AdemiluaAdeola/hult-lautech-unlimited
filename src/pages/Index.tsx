@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from "react";
+import { Navigation } from "@/components/Navigation";
+import { HeroSection } from "@/components/HeroSection";
+import { FocusSection } from "@/components/FocusSection";
+import { TimelineSection } from "@/components/TimelineSection";
+import { JudgesSection } from "@/components/JudgesSection";
+import { GallerySection } from "@/components/GallerySection";
+import { OrganizersSection } from "@/components/OrganizersSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { CTASection } from "@/components/CTASection";
+import { Footer } from "@/components/Footer";
+import { RegistrationModal } from "@/components/RegistrationModal";
 
 const Index = () => {
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation onRegisterClick={() => setIsRegistrationOpen(true)} />
+      <HeroSection onRegisterClick={() => setIsRegistrationOpen(true)} />
+      <FocusSection />
+      <TimelineSection />
+      <JudgesSection />
+      <GallerySection />
+      <OrganizersSection />
+      <TestimonialsSection />
+      <CTASection onRegisterClick={() => setIsRegistrationOpen(true)} />
+      <Footer />
+      <RegistrationModal
+        isOpen={isRegistrationOpen}
+        onClose={() => setIsRegistrationOpen(false)}
+      />
     </div>
   );
 };
