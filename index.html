@@ -5,42 +5,59 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
   <title>Hult Prize LAUTECH 2025 | UNLIMITED - Break Boundaries, Build Impact</title>
   <meta name="description" content="Join Hult Prize LAUTECH 2025 with the UNLIMITED theme. Build scalable social enterprises that break constraints and solve global problems. Register your team now!" />
-  <meta name="theme-color" content="#381B5A" />
+  <meta name="theme-color" content="#E6007E" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* ========================
-       CSS Variables & Reset
+       NEW PINK COLOR SCHEME
     ======================== */
     :root {
-      --hult-magenta: #E6007E;
-      --hult-deep: #381B5A;
-      --hult-light: #F8F5FF;
-      --hult-gradient: linear-gradient(135deg, var(--hult-magenta), var(--hult-deep));
-      --hult-gradient-hover: linear-gradient(135deg, #FF0080, #4A1F7A);
+      --primary-pink: #E6007E;
+      --primary-pink-light: #FF3399;
+      --primary-pink-dark: #CC0066;
+      --secondary-pink: #FF66B2;
+      --accent-pink: #FF99CC;
+      --light-pink: #FFF0F8;
+      --light-pink-bg: #FFF5FA;
+      --dark-pink: #B3005E;
+      --text-primary: #1A1A1A;
+      --text-secondary: #4A4A4A;
+      --text-muted: #777777;
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #FFF9FD;
+      --bg-tertiary: #FFF0F8;
       --accent-gold: #FFD700;
       --accent-teal: #00D4AA;
-      --text-primary: #1A1A2E;
-      --text-secondary: #4A5568;
-      --text-muted: #718096;
-      --bg-primary: #FFFFFF;
-      --bg-secondary: #F9F7FF;
-      --bg-tertiary: #F0EBFF;
-      --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
-      --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-      --shadow-xl: 0 25px 50px -12px rgba(56, 27, 90, 0.15);
-      --shadow-glow: 0 0 30px rgba(230, 0, 126, 0.15);
+      
+      /* Updated Gradients */
+      --pink-gradient: linear-gradient(135deg, var(--primary-pink), var(--primary-pink-light));
+      --pink-gradient-hover: linear-gradient(135deg, var(--primary-pink-dark), var(--primary-pink));
+      --subtle-pink-gradient: linear-gradient(135deg, rgba(230, 0, 126, 0.1), rgba(255, 102, 178, 0.1));
+      
+      /* Shadows */
+      --shadow-sm: 0 4px 6px -1px rgba(230, 0, 126, 0.05);
+      --shadow-md: 0 10px 15px -3px rgba(230, 0, 126, 0.08);
+      --shadow-lg: 0 20px 25px -5px rgba(230, 0, 126, 0.1);
+      --shadow-xl: 0 25px 50px -12px rgba(230, 0, 126, 0.15);
+      --shadow-glow: 0 0 30px rgba(230, 0, 126, 0.2);
+      
+      /* Border */
+      --border-light: 1px solid rgba(230, 0, 126, 0.1);
+      --border-medium: 1px solid rgba(230, 0, 126, 0.15);
+      --border-dark: 1px solid rgba(230, 0, 126, 0.2);
+      
+      /* Radius */
       --radius-sm: 8px;
       --radius-md: 12px;
       --radius-lg: 16px;
       --radius-xl: 24px;
       --radius-full: 9999px;
+      
+      /* Transitions */
       --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
       --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
       --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-      --border-light: 1px solid rgba(56, 27, 90, 0.08);
-      --border-medium: 1px solid rgba(56, 27, 90, 0.12);
     }
 
     * {
@@ -65,12 +82,12 @@
     }
 
     ::selection {
-      background: rgba(230, 0, 126, 0.15);
-      color: var(--hult-deep);
+      background: rgba(230, 0, 126, 0.2);
+      color: var(--text-primary);
     }
 
     /* ========================
-       Typography (Responsive)
+       IMPROVED TYPOGRAPHY
     ======================== */
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Poppins', sans-serif;
@@ -82,7 +99,7 @@
 
     h1 {
       font-size: 2.5rem;
-      background: linear-gradient(135deg, var(--hult-deep), var(--hult-magenta));
+      background: var(--pink-gradient);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -91,27 +108,41 @@
 
     h2 {
       font-size: 2rem;
+      color: var(--primary-pink-dark);
       position: relative;
       display: inline-block;
     }
 
+    h2:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 60px;
+      height: 4px;
+      background: var(--pink-gradient);
+      border-radius: 2px;
+    }
+
     h3 {
       font-size: 1.5rem;
-      color: var(--hult-deep);
+      color: var(--primary-pink);
     }
 
     .text-large {
       font-size: 1.125rem;
       color: var(--text-secondary);
+      line-height: 1.7;
     }
 
     .text-muted {
       color: var(--text-muted);
       font-size: 0.95rem;
+      line-height: 1.6;
     }
 
     /* ========================
-       Base Layout & Container
+       IMPROVED LAYOUT
     ======================== */
     .container {
       width: 100%;
@@ -131,16 +162,26 @@
       overflow: hidden;
     }
 
+    .section-alt {
+      background: var(--light-pink-bg);
+    }
+
     .text-center {
       text-align: center;
+    }
+
+    .text-center h2:after {
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     .mb-2 { margin-bottom: 2rem; }
     .mb-3 { margin-bottom: 3rem; }
     .mb-4 { margin-bottom: 4rem; }
+    .mt-4 { margin-top: 4rem; }
 
     /* ========================
-       Header & Navigation
+       IMPROVED HEADER
     ======================== */
     header {
       position: fixed;
@@ -148,16 +189,16 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
       border-bottom: var(--border-light);
       transition: all var(--transition-base);
-      padding: 16px 0;
+      padding: 20px 0;
     }
 
     header.scrolled {
-      padding: 12px 0;
+      padding: 15px 0;
       box-shadow: var(--shadow-md);
       background: rgba(255, 255, 255, 0.98);
     }
@@ -181,17 +222,34 @@
     }
 
     .logo-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--hult-gradient);
+      width: 50px;
+      height: 50px;
+      background: var(--pink-gradient);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 20px;
       box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-icon:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.7s;
+    }
+
+    .logo:hover .logo-icon:after {
+      left: 100%;
     }
 
     .logo-text {
@@ -202,15 +260,19 @@
     .logo-title {
       font-family: 'Poppins', sans-serif;
       font-weight: 800;
-      font-size: 1.1rem;
-      color: var(--hult-deep);
+      font-size: 1.2rem;
+      background: var(--pink-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
       line-height: 1;
     }
 
     .logo-subtitle {
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
       letter-spacing: 0.5px;
+      font-weight: 500;
     }
 
     /* Desktop Navigation */
@@ -218,30 +280,69 @@
       display: none;
     }
 
-    /* Mobile Menu Toggle */
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      position: relative;
+      padding: 8px 0;
+      transition: all var(--transition-fast);
+    }
+
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--pink-gradient);
+      transition: width var(--transition-base);
+    }
+
+    .nav-link:hover {
+      color: var(--primary-pink);
+    }
+
+    .nav-link:hover:after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: var(--primary-pink);
+      font-weight: 700;
+    }
+
+    .nav-link.active:after {
+      width: 100%;
+    }
+
+    /* Mobile Menu */
     .mobile-menu-toggle {
       display: flex;
       background: none;
       border: none;
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: var(--radius-md);
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      color: var(--hult-deep);
+      color: var(--primary-pink);
       transition: all var(--transition-fast);
       z-index: 1001;
+      background: var(--light-pink-bg);
     }
 
     .mobile-menu-toggle:hover {
-      background: rgba(56, 27, 90, 0.05);
+      background: var(--bg-tertiary);
+      transform: rotate(90deg);
     }
 
-    /* Mobile Menu */
     .mobile-menu {
       position: fixed;
-      top: 80px;
+      top: 90px;
       left: 0;
       right: 0;
       background: white;
@@ -254,6 +355,8 @@
       z-index: 999;
       max-height: 0;
       overflow: hidden;
+      border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      border-top: var(--border-light);
     }
 
     .mobile-menu.active {
@@ -267,34 +370,53 @@
     .mobile-nav {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 8px;
     }
 
     .mobile-nav a {
-      padding: 12px 16px;
+      padding: 14px 16px;
       border-radius: var(--radius-md);
       color: var(--text-primary);
       text-decoration: none;
       font-weight: 600;
       transition: all var(--transition-fast);
       font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .mobile-nav a:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--primary-pink);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
     }
 
     .mobile-nav a:hover,
     .mobile-nav a.active {
-      background: rgba(230, 0, 126, 0.1);
-      color: var(--hult-magenta);
+      background: var(--light-pink-bg);
+      color: var(--primary-pink);
+      padding-left: 24px;
+    }
+
+    .mobile-nav a:hover:before,
+    .mobile-nav a.active:before {
+      opacity: 1;
     }
 
     /* ========================
-       Hero Section
+       IMPROVED HERO SECTION
     ======================== */
     .hero {
       min-height: 100vh;
       display: flex;
       align-items: center;
       padding-top: 100px;
-      background: linear-gradient(135deg, #FCFAFF 0%, #FFFFFF 100%);
+      background: linear-gradient(135deg, var(--light-pink-bg) 0%, #FFFFFF 100%);
       position: relative;
       overflow: hidden;
     }
@@ -307,8 +429,8 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 20% 80%, rgba(230, 0, 126, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(56, 27, 90, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(230, 0, 126, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 102, 178, 0.1) 0%, transparent 50%);
       z-index: 0;
     }
 
@@ -327,29 +449,37 @@
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 8px 16px;
+      gap: 10px;
+      padding: 10px 20px;
       background: rgba(230, 0, 126, 0.1);
-      border: 1px solid rgba(230, 0, 126, 0.2);
+      border: var(--border-medium);
       border-radius: var(--radius-full);
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--hult-magenta);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary-pink);
       margin-bottom: 24px;
+      backdrop-filter: blur(10px);
     }
 
     .hero-badge:before {
       content: '';
-      width: 8px;
-      height: 8px;
-      background: var(--hult-magenta);
+      width: 10px;
+      height: 10px;
+      background: var(--primary-pink);
       border-radius: 50%;
       animation: pulse 2s infinite;
+      box-shadow: 0 0 0 5px rgba(230, 0, 126, 0.2);
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.5; }
+      0%, 100% { 
+        transform: scale(1);
+        opacity: 1; 
+      }
+      50% { 
+        transform: scale(1.2);
+        opacity: 0.7; 
+      }
     }
 
     .hero-lead {
@@ -357,6 +487,7 @@
       color: var(--text-secondary);
       margin-bottom: 40px;
       max-width: 100%;
+      line-height: 1.7;
     }
 
     .hero-actions {
@@ -378,35 +509,63 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       border: 2px solid transparent;
       position: relative;
       overflow: hidden;
       width: 100%;
     }
 
+    .btn:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.7s;
+    }
+
+    .btn:hover:before {
+      left: 100%;
+    }
+
     .btn-primary {
-      background: var(--hult-gradient);
+      background: var(--pink-gradient);
       color: white;
       box-shadow: var(--shadow-md);
     }
 
     .btn-primary:hover {
-      background: var(--hult-gradient-hover);
+      background: var(--pink-gradient-hover);
       transform: translateY(-3px);
       box-shadow: var(--shadow-lg), var(--shadow-glow);
     }
 
     .btn-secondary {
       background: white;
-      color: var(--hult-deep);
-      border: 2px solid rgba(56, 27, 90, 0.2);
+      color: var(--primary-pink);
+      border: 2px solid rgba(230, 0, 126, 0.2);
     }
 
     .btn-secondary:hover {
-      border-color: var(--hult-deep);
+      background: var(--light-pink-bg);
+      border-color: var(--primary-pink);
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-outline-light:hover {
+      background: white;
+      color: var(--primary-pink);
+      border-color: white;
     }
 
     .hero-stats {
@@ -421,22 +580,24 @@
     }
 
     .stat-value {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       font-family: 'Poppins', sans-serif;
-      background: var(--hult-gradient);
+      background: var(--pink-gradient);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       line-height: 1;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 10px rgba(230, 0, 126, 0.1);
     }
 
     .stat-label {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 1px;
+      font-weight: 600;
     }
 
     .hero-visual {
@@ -451,10 +612,11 @@
       background: white;
       border-radius: var(--radius-xl);
       box-shadow: var(--shadow-xl);
-      padding: 20px;
+      padding: 24px;
       transition: all var(--transition-base);
       border: var(--border-light);
-      width: 200px;
+      width: 220px;
+      backdrop-filter: blur(10px);
     }
 
     .visual-card-1 {
@@ -478,301 +640,224 @@
       animation: float 5s ease-in-out infinite 0.5s;
     }
 
-    /* ========================
-    Fixed Timeline Section
-    ======================== */
-    .timeline-container {
-    max-width: 1000px;
-    margin: 0 auto;
-    position: relative;
-    }
-
-    .timeline {
-    position: relative;
-    padding: 40px 0;
-    }
-
-    .timeline:before {
-    content: '';
-    position: absolute;
-    left: 30px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, var(--hult-magenta), var(--hult-deep));
-    border-radius: 4px;
-    z-index: 1;
-    }
-
-    .timeline-item {
-    display: flex;
-    margin-bottom: 50px;
-    position: relative;
-    z-index: 2;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all var(--transition-base);
-    }
-
-    .timeline-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-    }
-
-    .timeline-date {
-    min-width: 80px;
-    padding: 12px 16px;
-    text-align: center;
-    font-weight: 800;
-    color: var(--hult-magenta);
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    flex-shrink: 0;
-    background: rgba(230, 0, 126, 0.1);
-    border-radius: var(--radius-lg);
-    margin-right: 20px;
-    border: 1px solid rgba(230, 0, 126, 0.2);
-    position: relative;
-    }
-
-    .timeline-date:after {
-    content: '';
-    position: absolute;
-    right: -10px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    border: 4px solid var(--hult-magenta);
-    box-shadow: 0 0 0 4px rgba(230, 0, 126, 0.1);
-    z-index: 3;
-    }
-
-    .timeline-content {
-    flex: 1;
-    background: white;
-    border-radius: var(--radius-lg);
-    padding: 24px;
-    box-shadow: var(--shadow-md);
-    border: var(--border-light);
-    position: relative;
-    transition: all var(--transition-base);
-    }
-
-    .timeline-content:hover {
-    transform: translateX(10px);
-    box-shadow: var(--shadow-xl);
-    }
-
-    .timeline-content:before {
-    content: '';
-    position: absolute;
-    left: -10px;
-    top: 30px;
-    width: 0;
-    height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-right: 12px solid white;
-    }
-
-    .timeline-marker {
-    position: absolute;
-    left: 26px;
-    top: 30px;
-    width: 12px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    border: 3px solid var(--hult-magenta);
-    box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1);
-    z-index: 3;
-    }
-
-    .timeline-phase {
-    display: inline-block;
-    padding: 6px 12px;
-    background: var(--hult-gradient);
-    color: white;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: var(--radius-full);
-    margin-bottom: 12px;
-    letter-spacing: 0.5px;
-    }
-
-    .timeline-title {
-    font-size: 1.25rem;
-    color: var(--hult-deep);
-    margin-bottom: 8px;
-    }
-
-    .timeline-description {
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    line-height: 1.6;
-    }
-
-    .timeline-actions {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    }
-
-    .timeline-btn {
-    padding: 8px 16px;
-    border-radius: var(--radius-full);
-    font-size: 0.85rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    border: 2px solid transparent;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    }
-
-    .timeline-btn-primary {
-    background: rgba(230, 0, 126, 0.1);
-    color: var(--hult-magenta);
-    border-color: rgba(230, 0, 126, 0.2);
-    }
-
-    .timeline-btn-primary:hover {
-    background: var(--hult-magenta);
-    color: white;
-    }
-
-    .timeline-btn-secondary {
-    background: rgba(56, 27, 90, 0.05);
-    color: var(--hult-deep);
-    border-color: rgba(56, 27, 90, 0.1);
-    }
-
-    .timeline-btn-secondary:hover {
-    background: var(--hult-deep);
-    color: white;
-    }
-
-    /* Responsive timeline adjustments */
-    @media (min-width: 768px) {
-    .timeline:before {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .timeline-item {
-        width: 50%;
-        margin-bottom: 60px;
-    }
-    
-    .timeline-item:nth-child(odd) {
-        margin-left: auto;
-        padding-left: 40px;
-    }
-    
-    .timeline-item:nth-child(even) {
-        margin-right: auto;
-        padding-right: 40px;
-        flex-direction: row-reverse;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-date {
-        margin-right: 0;
-        margin-left: 20px;
-        text-align: left;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-date:after {
-        right: auto;
-        left: -10px;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-content:before {
-        left: auto;
-        right: -10px;
-        border-left: 12px solid white;
-        border-right: none;
-    }
-    
-    .timeline-item:nth-child(even) .timeline-marker {
-        left: auto;
-        right: 26px;
-    }
-    
-    .timeline-date {
-        min-width: 120px;
-        text-align: center;
-    }
-    
-    .timeline-date:after {
-        position: absolute;
-        right: -10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .timeline-item:nth-child(even) .timeline-date:after {
-        right: auto;
-        left: -10px;
-    }
-    
-    .timeline-marker {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    
-    .timeline-item:nth-child(even) .timeline-marker {
-        left: 50%;
-    }
-    }
-
-    @media (max-width: 767px) {
-    .timeline:before {
-        left: 40px;
-    }
-    
-    .timeline-date {
-        min-width: 90px;
-    }
-    
-    .timeline-marker {
-        left: 36px;
-    }
-    }
-
     @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(1deg); }
     }
 
     .visual-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: var(--shadow-xl), 0 10px 40px rgba(56, 27, 90, 0.15);
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: var(--shadow-xl), 0 20px 40px rgba(230, 0, 126, 0.2);
+      z-index: 4;
     }
 
     .visual-icon {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       border-radius: 16px;
-      background: rgba(230, 0, 126, 0.1);
+      background: var(--light-pink-bg);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 16px;
-      color: var(--hult-magenta);
-      font-size: 20px;
+      margin-bottom: 20px;
+      color: var(--primary-pink);
+      font-size: 22px;
+      transition: all var(--transition-base);
+    }
+
+    .visual-card:hover .visual-icon {
+      background: var(--pink-gradient);
+      color: white;
+      transform: rotateY(180deg);
     }
 
     /* ========================
-       Event Countdown Section
+       IMPROVED TIMELINE SECTION
+    ======================== */
+    .timeline-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(to bottom, var(--primary-pink), var(--secondary-pink));
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all var(--transition-base);
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .timeline-date {
+      min-width: 80px;
+      padding: 12px 16px;
+      text-align: center;
+      font-weight: 800;
+      color: var(--primary-pink);
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      flex-shrink: 0;
+      background: var(--light-pink-bg);
+      border-radius: var(--radius-lg);
+      margin-right: 20px;
+      border: var(--border-medium);
+      position: relative;
+    }
+
+    .timeline-date:after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      border: 4px solid var(--primary-pink);
+      box-shadow: 0 0 0 4px rgba(230, 0, 126, 0.1);
+      z-index: 3;
+    }
+
+    .timeline-content {
+      flex: 1;
+      background: white;
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-md);
+      border: var(--border-light);
+      position: relative;
+      transition: all var(--transition-base);
+    }
+
+    .timeline-content:hover {
+      transform: translateX(10px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--primary-pink);
+    }
+
+    .timeline-content:before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 30px;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid white;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: 26px;
+      top: 30px;
+      width: 12px;
+      height: 12px;
+      background: white;
+      border-radius: 50%;
+      border: 3px solid var(--primary-pink);
+      box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1);
+      z-index: 3;
+    }
+
+    .timeline-phase {
+      display: inline-block;
+      padding: 6px 16px;
+      background: var(--pink-gradient);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .timeline-title {
+      font-size: 1.25rem;
+      color: var(--primary-pink);
+      margin-bottom: 8px;
+    }
+
+    .timeline-description {
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .timeline-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timeline-btn {
+      padding: 8px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all var(--transition-fast);
+      border: 2px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .timeline-btn-primary {
+      background: rgba(230, 0, 126, 0.1);
+      color: var(--primary-pink);
+      border-color: rgba(230, 0, 126, 0.2);
+    }
+
+    .timeline-btn-primary:hover {
+      background: var(--primary-pink);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .timeline-btn-secondary {
+      background: var(--light-pink-bg);
+      color: var(--primary-pink);
+      border-color: rgba(230, 0, 126, 0.1);
+    }
+
+    .timeline-btn-secondary:hover {
+      background: var(--primary-pink);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* ========================
+       IMPROVED EVENT COUNTDOWN
     ======================== */
     .event-countdown {
-      padding: 60px 0;
-      background: var(--hult-gradient);
+      padding: 80px 0;
+      background: var(--pink-gradient);
       color: white;
       position: relative;
       overflow: hidden;
@@ -786,8 +871,8 @@
       right: 0;
       bottom: 0;
       background: 
-        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     }
 
     .countdown-container {
@@ -808,29 +893,31 @@
     }
 
     .countdown-subtitle {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.9);
-      margin: 0 auto 24px;
-      max-width: 100%;
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin: 0 auto 32px;
+      max-width: 600px;
+      line-height: 1.7;
     }
 
     .event-details {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       border-radius: var(--radius-lg);
-      padding: 20px;
-      margin: 0 auto 40px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      max-width: 100%;
+      padding: 24px;
+      margin: 0 auto 48px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      max-width: 600px;
     }
 
     .event-detail {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 12px;
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.95rem;
+      gap: 15px;
+      margin-bottom: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 1rem;
+      justify-content: center;
     }
 
     .event-detail:last-child {
@@ -839,69 +926,119 @@
 
     .event-detail i {
       color: var(--accent-gold);
-      min-width: 20px;
+      min-width: 24px;
+      font-size: 1.1rem;
     }
 
-    .countdown-timer {
+    /*.countdown-timer {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
-      margin-bottom: 40px;
+      gap: 20px;
+      margin-bottom: 48px;
     }
 
     .countdown-item {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.15);
       backdrop-filter: blur(10px);
       border-radius: var(--radius-lg);
-      padding: 20px 15px;
-      min-width: 80px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 25px 20px;
+      min-width: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
       transition: all var(--transition-base);
       flex: 1;
-      max-width: 100px;
+      max-width: 120px;
     }
 
     .countdown-item:hover {
-      background: rgba(255, 255, 255, 0.15);
-      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
 
     .countdown-value {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 800;
       font-family: 'Poppins', sans-serif;
       line-height: 1;
       display: block;
       margin-bottom: 8px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     }
 
     .countdown-label {
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.9);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }*/
+
+    /* Countdown timer */
+    .countdown-timer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 48px;
+    }
+
+    .countdown-item {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-lg);
+    padding: 25px 20px;
+    min-width: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all var(--transition-base);
+    flex: 1;
+    max-width: 120px;
+    }
+
+    .countdown-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .countdown-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    display: block;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .countdown-label {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
     }
 
     /* ========================
-       Features Section
+       IMPROVED FEATURES SECTION
     ======================== */
     .features-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 30px;
       margin-top: 40px;
     }
 
     .feature-card {
       background: white;
       border-radius: var(--radius-lg);
-      padding: 30px 24px;
+      padding: 40px 30px;
       text-align: center;
       transition: all var(--transition-base);
       border: var(--border-light);
       position: relative;
       overflow: hidden;
+      height: 100%;
     }
 
     .feature-card:before {
@@ -911,15 +1048,16 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: var(--hult-gradient);
+      background: var(--pink-gradient);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform var(--transition-base);
     }
 
     .feature-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-15px);
       box-shadow: var(--shadow-xl);
+      border-color: var(--primary-pink);
     }
 
     .feature-card:hover:before {
@@ -927,102 +1065,31 @@
     }
 
     .feature-icon {
-      width: 64px;
-      height: 64px;
+      width: 80px;
+      height: 80px;
       border-radius: 20px;
-      background: rgba(230, 0, 126, 0.1);
+      background: var(--light-pink-bg);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 24px;
-      color: var(--hult-magenta);
-      font-size: 24px;
+      margin: 0 auto 30px;
+      color: var(--primary-pink);
+      font-size: 28px;
       transition: all var(--transition-base);
     }
 
     .feature-card:hover .feature-icon {
-      background: var(--hult-gradient);
+      background: var(--pink-gradient);
       color: white;
-      transform: rotateY(180deg);
+      transform: rotateY(180deg) scale(1.1);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 15px;
     }
 
     /* ========================
-       Timeline Section
-    ======================== */
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .timeline-line {
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--hult-magenta), var(--hult-deep));
-      z-index: 1;
-    }
-
-    .timeline-item {
-      display: flex;
-      margin-bottom: 40px;
-      position: relative;
-      z-index: 2;
-      opacity: 0;
-      transform: translateX(-20px);
-      transition: all var(--transition-base);
-    }
-
-    .timeline-item.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    .timeline-date {
-      width: 50px;
-      padding: 10px 5px;
-      text-align: center;
-      font-weight: 700;
-      color: var(--hult-magenta);
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      flex-shrink: 0;
-    }
-
-    .timeline-content {
-      flex: 1;
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-left: 15px;
-      box-shadow: var(--shadow-md);
-      border: var(--border-light);
-      position: relative;
-      transition: all var(--transition-base);
-    }
-
-    .timeline-content:hover {
-      transform: translateX(5px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .timeline-content:before {
-      content: '';
-      position: absolute;
-      left: -10px;
-      top: 24px;
-      width: 20px;
-      height: 20px;
-      background: white;
-      border-radius: 50%;
-      border: 4px solid var(--hult-magenta);
-      box-shadow: 0 0 0 4px rgba(230, 0, 126, 0.1);
-    }
-
-    /* ========================
-       Gallery Section
+       IMPROVED GALLERY SECTION
     ======================== */
     .gallery-section {
       position: relative;
@@ -1036,7 +1103,7 @@
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
+      gap: 20px;
       margin-top: 40px;
     }
 
@@ -1044,13 +1111,13 @@
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      height: 200px;
+      height: 250px;
       cursor: pointer;
       transition: all var(--transition-base);
     }
 
     .gallery-item:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
       box-shadow: var(--shadow-xl);
     }
 
@@ -1058,11 +1125,11 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform var(--transition-base);
+      transition: transform var(--transition-slow);
     }
 
     .gallery-item:hover .gallery-img {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
 
     .gallery-overlay {
@@ -1070,46 +1137,46 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(transparent, rgba(56, 27, 90, 0.9));
-      padding: 16px;
+      background: linear-gradient(transparent, rgba(230, 0, 126, 0.9));
+      padding: 24px;
       color: white;
-      transform: translateY(10px);
-      opacity: 0;
+      transform: translateY(100%);
       transition: all var(--transition-base);
+      text-align: center;
     }
 
     .gallery-item:hover .gallery-overlay {
       transform: translateY(0);
-      opacity: 1;
     }
 
     .gallery-year {
-      font-size: 0.75rem;
+      font-size: 0.85rem;
       color: var(--accent-gold);
       font-weight: 600;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
     }
 
     .gallery-caption {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      line-height: 1.3;
+      line-height: 1.4;
     }
 
     /* ========================
-       Executives Section
+       IMPROVED EXECUTIVES SECTION
     ======================== */
     .executives-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 25px;
       margin-top: 40px;
     }
 
     .executive-card {
       background: white;
       border-radius: var(--radius-lg);
-      padding: 24px 20px;
+      padding: 30px 25px;
       text-align: center;
       transition: all var(--transition-base);
       border: var(--border-light);
@@ -1124,26 +1191,27 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--hult-gradient);
+      background: var(--subtle-pink-gradient);
       opacity: 0;
       transition: opacity var(--transition-base);
     }
 
     .executive-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
       box-shadow: var(--shadow-xl);
+      border-color: var(--primary-pink);
     }
 
     .executive-card:hover:before {
-      opacity: 0.03;
+      opacity: 1;
     }
 
     .executive-img {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 16px;
+      margin: 0 auto 20px;
       border: 4px solid white;
       box-shadow: var(--shadow-lg);
       position: relative;
@@ -1152,181 +1220,120 @@
     }
 
     .executive-card:hover .executive-img {
-      transform: scale(1.05);
-      border-color: var(--hult-magenta);
+      transform: scale(1.1);
+      border-color: var(--primary-pink);
+      box-shadow: 0 0 0 8px rgba(230, 0, 126, 0.1);
     }
 
     .executive-role {
-      color: var(--hult-magenta);
-      font-weight: 600;
-      margin-bottom: 8px;
-      font-size: 0.8rem;
+      color: var(--primary-pink);
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       position: relative;
       z-index: 1;
     }
 
+    .executive-card p.text-muted {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 20px;
+    }
+
     .executive-links {
       display: flex;
       justify-content: center;
-      gap: 10px;
-      margin-top: 16px;
+      gap: 12px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     .executive-link {
-      width: 32px;
-      height: 32px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
-      background: rgba(56, 27, 90, 0.05);
+      background: var(--light-pink-bg);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--text-secondary);
+      color: var(--primary-pink);
       text-decoration: none;
       transition: all var(--transition-fast);
-      position: relative;
-      z-index: 1;
-      font-size: 0.9rem;
-    }
-
-    .executive-link:hover {
-      background: var(--hult-magenta);
-      color: white;
-      transform: translateY(-2px);
-    }
-
-    /* ========================
-       Judges Section
-    ======================== */
-    .judges-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .judge-card {
-      background: white;
-      border-radius: var(--radius-lg);
-      padding: 24px 20px;
-      text-align: center;
-      transition: all var(--transition-base);
-      border: var(--border-light);
       position: relative;
       overflow: hidden;
     }
 
-    .judge-card:before {
+    .executive-link:before {
       content: '';
       position: absolute;
       top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--pink-gradient);
+      transition: left var(--transition-base);
+    }
+
+    .executive-link:hover:before {
       left: 0;
-      right: 0;
-      bottom: 0;
-      background: var(--hult-gradient);
-      opacity: 0;
-      transition: opacity var(--transition-base);
     }
 
-    .judge-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-xl);
-    }
-
-    .judge-card:hover:before {
-      opacity: 0.03;
-    }
-
-    .judge-img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 16px;
-      border: 4px solid white;
-      box-shadow: var(--shadow-lg);
+    .executive-link i {
       position: relative;
       z-index: 1;
-      transition: all var(--transition-base);
     }
 
-    .judge-card:hover .judge-img {
-      transform: scale(1.05);
-      border-color: var(--hult-magenta);
-    }
-
-    .judge-links {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .judge-link {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: rgba(56, 27, 90, 0.05);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-secondary);
-      text-decoration: none;
-      transition: all var(--transition-fast);
-      position: relative;
-      z-index: 1;
-      font-size: 0.9rem;
-    }
-
-    .judge-link:hover {
-      background: var(--hult-magenta);
+    .executive-link:hover {
       color: white;
-      transform: translateY(-2px);
+      transform: translateY(-3px) scale(1.1);
     }
 
     /* ========================
-       FAQ Section
+       IMPROVED FAQ SECTION
     ======================== */
     .faq-container {
-      max-width: 100%;
+      max-width: 800px;
       margin: 0 auto;
     }
 
     .faq-item {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
       background: white;
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       border: var(--border-light);
       overflow: hidden;
       transition: all var(--transition-base);
     }
 
     .faq-item:hover {
-      border-color: rgba(230, 0, 126, 0.2);
+      border-color: var(--primary-pink);
       box-shadow: var(--shadow-md);
     }
 
     .faq-question {
-      padding: 20px;
+      padding: 24px;
       cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--hult-deep);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary-pink);
       transition: all var(--transition-fast);
+      background: var(--light-pink-bg);
     }
 
     .faq-question:hover {
-      color: var(--hult-magenta);
+      background: rgba(230, 0, 126, 0.05);
     }
 
     .faq-question i {
       transition: transform var(--transition-base);
-      color: var(--hult-magenta);
-      font-size: 0.9rem;
+      color: var(--primary-pink);
+      font-size: 1rem;
     }
 
     .faq-item.active .faq-question i {
@@ -1344,33 +1351,47 @@
     }
 
     .faq-answer-content {
-      padding: 0 20px 20px;
+      padding: 0 24px 24px;
       color: var(--text-secondary);
-      font-size: 0.95rem;
+      font-size: 1rem;
+      line-height: 1.7;
     }
 
     /* ========================
-       CTA Section
+       IMPROVED CTA SECTION
     ======================== */
     .cta-section {
-      background: linear-gradient(135deg, var(--hult-deep) 0%, #2A1045 100%);
+      background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-pink-dark) 100%);
       color: white;
       position: relative;
       overflow: hidden;
+      padding: 100px 0;
+    }
+
+    .cta-section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 30% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
     }
 
     .cta-container {
       position: relative;
       z-index: 1;
       text-align: center;
-      max-width: 100%;
+      max-width: 700px;
       margin: 0 auto;
     }
 
     .cta-title {
       color: white;
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 24px;
     }
 
     .cta-title:after {
@@ -1378,48 +1399,37 @@
     }
 
     .cta-subtitle {
-      font-size: 1.125rem;
-      color: rgba(255, 255, 255, 0.9);
-      margin-bottom: 40px;
-      max-width: 100%;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 48px;
+      max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.7;
     }
 
     .cta-buttons {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
       justify-content: center;
       align-items: center;
     }
 
-    .btn-outline-light {
-      background: transparent;
-      color: white;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .btn-outline-light:hover {
-      background: white;
-      color: var(--hult-deep);
-      border-color: white;
-    }
-
     /* ========================
-       Footer
+       IMPROVED FOOTER
     ======================== */
     footer {
-      background: #1A0F2E;
+      background: linear-gradient(135deg, #1A0F2E 0%, #2D1B4E 100%);
       color: white;
-      padding: 60px 0 40px;
+      padding: 80px 0 40px;
     }
 
     .footer-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
+      gap: 50px;
+      margin-bottom: 60px;
     }
 
     .footer-brand {
@@ -1429,42 +1439,59 @@
     .footer-logo {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
+      gap: 15px;
+      margin-bottom: 25px;
     }
 
     .footer-logo-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--hult-gradient);
-      border-radius: 10px;
+      width: 50px;
+      height: 50px;
+      background: var(--pink-gradient);
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-weight: 900;
-      font-size: 16px;
+      font-size: 18px;
     }
 
     .footer-logo-text {
       font-family: 'Poppins', sans-serif;
       font-weight: 800;
-      font-size: 1.25rem;
+      font-size: 1.5rem;
+      background: linear-gradient(135deg, #FF66B2, #E6007E);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     .footer-description {
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 24px;
-      line-height: 1.7;
-      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 30px;
+      line-height: 1.8;
+      font-size: 1rem;
     }
 
     .footer-heading {
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 1.125rem;
-      margin-bottom: 20px;
+      font-size: 1.25rem;
+      margin-bottom: 25px;
       color: white;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .footer-heading:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 40px;
+      height: 3px;
+      background: var(--pink-gradient);
+      border-radius: 2px;
     }
 
     .footer-links {
@@ -1472,31 +1499,33 @@
     }
 
     .footer-links li {
-      margin-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .footer-links a {
-      color: rgba(255, 255, 255, 0.7);
+      color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       transition: all var(--transition-fast);
-      display: inline-block;
-      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
     }
 
     .footer-links a:hover {
-      color: white;
-      transform: translateX(4px);
+      color: var(--secondary-pink);
+      transform: translateX(5px);
     }
 
     .social-links {
       display: flex;
-      gap: 12px;
-      margin-top: 20px;
+      gap: 15px;
+      margin-top: 25px;
     }
 
     .social-link {
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.1);
       display: flex;
@@ -1505,24 +1534,31 @@
       color: white;
       text-decoration: none;
       transition: all var(--transition-fast);
-      font-size: 1rem;
+      font-size: 1.1rem;
     }
 
     .social-link:hover {
-      background: var(--hult-magenta);
-      transform: translateY(-3px);
+      background: var(--pink-gradient);
+      transform: translateY(-5px) rotate(10deg);
+      box-shadow: 0 10px 20px rgba(230, 0, 126, 0.3);
     }
 
     .footer-bottom {
-      padding-top: 40px;
+      padding-top: 50px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       text-align: center;
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.95rem;
+    }
+
+    .footer-bottom p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
     }
 
     /* ========================
-       Modal
+       IMPROVED MODAL
     ======================== */
     .modal {
       display: none;
@@ -1555,6 +1591,7 @@
       overflow: hidden;
       max-height: 90vh;
       overflow-y: auto;
+      position: relative;
     }
 
     @keyframes slideUp {
@@ -1569,24 +1606,24 @@
     }
 
     .modal-header {
-      padding: 24px 20px 0;
+      padding: 32px 40px 0;
     }
 
     .modal-body {
-      padding: 24px 20px 30px;
+      padding: 32px 40px 40px;
     }
 
     .close-modal {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      background: none;
+      top: 20px;
+      right: 20px;
+      background: var(--light-pink-bg);
       border: none;
-      color: var(--text-muted);
+      color: var(--primary-pink);
       font-size: 1.5rem;
       cursor: pointer;
-      width: 40px;
-      height: 40px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -1596,12 +1633,13 @@
     }
 
     .close-modal:hover {
-      background: rgba(56, 27, 90, 0.1);
-      color: var(--hult-deep);
+      background: var(--primary-pink);
+      color: white;
+      transform: rotate(90deg);
     }
 
     /* ========================
-       Form Styles
+       IMPROVED FORM STYLES
     ======================== */
     .form-step {
       display: none;
@@ -1614,7 +1652,7 @@
     .form-progress {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
       position: relative;
     }
 
@@ -1625,7 +1663,7 @@
       left: 0;
       width: 100%;
       height: 2px;
-      background: rgba(56, 27, 90, 0.1);
+      background: rgba(230, 0, 126, 0.1);
       z-index: 1;
     }
 
@@ -1633,24 +1671,25 @@
       position: relative;
       z-index: 2;
       background: white;
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.875rem;
-      font-weight: 600;
+      font-size: 0.9rem;
+      font-weight: 700;
       color: var(--text-muted);
-      border: 2px solid rgba(56, 27, 90, 0.1);
+      border: 2px solid rgba(230, 0, 126, 0.2);
       transition: all var(--transition-base);
     }
 
     .progress-step.active {
-      background: var(--hult-magenta);
+      background: var(--primary-pink);
       color: white;
-      border-color: var(--hult-magenta);
+      border-color: var(--primary-pink);
       transform: scale(1.1);
+      box-shadow: 0 0 0 4px rgba(230, 0, 126, 0.1);
     }
 
     .progress-step.completed {
@@ -1660,22 +1699,22 @@
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .form-label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-weight: 600;
-      color: var(--hult-deep);
-      font-size: 0.95rem;
+      color: var(--primary-pink);
+      font-size: 1rem;
     }
 
     .form-control {
       width: 100%;
-      padding: 14px;
+      padding: 16px;
       border-radius: var(--radius-md);
-      background: rgba(56, 27, 90, 0.03);
+      background: var(--light-pink-bg);
       border: var(--border-light);
       color: var(--text-primary);
       font-family: 'Inter', sans-serif;
@@ -1685,7 +1724,7 @@
 
     .form-control:focus {
       outline: none;
-      border-color: var(--hult-magenta);
+      border-color: var(--primary-pink);
       background: white;
       box-shadow: 0 0 0 3px rgba(230, 0, 126, 0.1);
     }
@@ -1693,20 +1732,18 @@
     .form-actions {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      margin-top: 30px;
+      gap: 20px;
+      margin-top: 40px;
     }
 
     /* ========================
-       Tablet Styles (768px and up)
+       TABLET STYLES (768px+)
     ======================== */
     @media (min-width: 768px) {
-      /* Typography */
-      h1 { font-size: 3rem; }
+      h1 { font-size: 3.5rem; }
       h2 { font-size: 2.5rem; }
       h3 { font-size: 1.75rem; }
       
-      /* Layout */
       .container {
         padding: 0 30px;
       }
@@ -1714,45 +1751,8 @@
       /* Navigation */
       nav.desktop {
         display: flex;
-        gap: 24px;
+        gap: 32px;
         align-items: center;
-      }
-      
-      .nav-link {
-        color: var(--text-secondary);
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 0.95rem;
-        position: relative;
-        padding: 8px 0;
-        transition: color var(--transition-fast);
-      }
-      
-      .nav-link:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 0;
-        height: 2px;
-        background: var(--hult-gradient);
-        transition: width var(--transition-base);
-      }
-      
-      .nav-link:hover {
-        color: var(--hult-deep);
-      }
-      
-      .nav-link:hover:after {
-        width: 100%;
-      }
-      
-      .nav-link.active {
-        color: var(--hult-magenta);
-      }
-      
-      .nav-link.active:after {
-        width: 100%;
       }
       
       .mobile-menu-toggle {
@@ -1774,33 +1774,33 @@
       
       .hero-stats {
         flex-direction: row;
-        gap: 40px;
+        gap: 60px;
       }
       
       .stat-value {
-        font-size: 2.5rem;
+        font-size: 3rem;
       }
       
       /* Features Grid */
       .features-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
       }
       
       /* Gallery Grid */
       .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 25px;
       }
       
       .gallery-item {
-        height: 220px;
+        height: 280px;
       }
       
-      /* Executives & Judges Grid */
-      .executives-grid,
-      .judges-grid {
+      /* Executives Grid */
+      .executives-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
+        gap: 30px;
       }
       
       /* CTA Buttons */
@@ -1811,7 +1811,7 @@
       /* Footer Grid */
       .footer-grid {
         grid-template-columns: 2fr 1fr 1fr;
-        gap: 40px;
+        gap: 50px;
       }
       
       /* Form Actions */
@@ -1819,15 +1819,86 @@
         flex-direction: row;
         justify-content: space-between;
       }
+
+      /* Timeline Responsive */
+      .timeline:before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .timeline-item {
+        width: 50%;
+        margin-bottom: 60px;
+      }
+      
+      .timeline-item:nth-child(odd) {
+        margin-left: auto;
+        padding-left: 40px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        margin-right: auto;
+        padding-right: 40px;
+        flex-direction: row-reverse;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-date {
+        margin-right: 0;
+        margin-left: 20px;
+        text-align: left;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-date:after {
+        right: auto;
+        left: -10px;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-content:before {
+        left: auto;
+        right: -10px;
+        border-left: 12px solid white;
+        border-right: none;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-marker {
+        left: auto;
+        right: 26px;
+      }
+      
+      .timeline-date {
+        min-width: 120px;
+        text-align: center;
+      }
+      
+      .timeline-date:after {
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .timeline-item:nth-child(even) .timeline-date:after {
+        right: auto;
+        left: -10px;
+      }
+      
+      .timeline-marker {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .timeline-item:nth-child(even) .timeline-marker {
+        left: 50%;
+      }
     }
 
     /* ========================
-       Desktop Styles (1024px and up)
+       DESKTOP STYLES (1024px+)
     ======================== */
     @media (min-width: 1024px) {
-      /* Typography */
-      h1 { font-size: 3.75rem; }
-      h2 { font-size: 2.75rem; }
+      h1 { font-size: 4rem; }
+      h2 { font-size: 3rem; }
       
       /* Hero Section */
       .hero-content {
@@ -1866,68 +1937,39 @@
         right: 40px;
       }
       
-      /* Features Grid */
-      .features-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-      }
-      
       /* Gallery Grid */
       .gallery-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 24px;
+        gap: 30px;
       }
       
       .gallery-item {
-        height: 250px;
+        height: 300px;
       }
       
-      /* Executives & Judges Grid */
-      .executives-grid,
-      .judges-grid {
+      /* Executives Grid */
+      .executives-grid {
         grid-template-columns: repeat(4, 1fr);
-        gap: 32px;
+        gap: 30px;
       }
       
-      .executive-card,
-      .judge-card {
-        padding: 32px;
+      .executive-card {
+        padding: 35px 30px;
       }
       
-      .executive-img,
-      .judge-img {
-        width: 120px;
-        height: 120px;
+      .executive-img {
+        width: 140px;
+        height: 140px;
       }
       
       /* Footer Grid */
       .footer-grid {
         grid-template-columns: 2fr 1fr 1fr 1fr;
       }
-      
-      /* Timeline */
-      .timeline-line {
-        left: 30px;
-      }
-      
-      .timeline-date {
-        width: 60px;
-        padding: 10px;
-        font-size: 1.125rem;
-      }
-      
-      .timeline-content {
-        padding: 32px;
-        margin-left: 24px;
-      }
-      
-      .timeline-content:before {
-        left: -12px;
-      }
     }
 
     /* ========================
-       Large Desktop Styles (1440px and up)
+       LARGE DESKTOP (1440px+)
     ======================== */
     @media (min-width: 1440px) {
       .container {
@@ -1935,23 +1977,26 @@
       }
       
       .gallery-item {
-        height: 280px;
+        height: 320px;
       }
       
-      .executive-img,
-      .judge-img {
-        width: 140px;
-        height: 140px;
+      .executive-img {
+        width: 150px;
+        height: 150px;
+      }
+      
+      .feature-card {
+        padding: 50px 40px;
       }
     }
 
     /* ========================
-       Small Mobile Styles (360px and below)
+       SMALL MOBILE (360px-)
     ======================== */
     @media (max-width: 360px) {
-      h1 { font-size: 2rem; }
-      h2 { font-size: 1.75rem; }
-      h3 { font-size: 1.25rem; }
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.8rem; }
+      h3 { font-size: 1.3rem; }
       
       .container {
         padding: 0 15px;
@@ -1962,37 +2007,49 @@
       }
       
       .visual-card {
-        width: 160px;
-        padding: 16px;
+        width: 180px;
+        padding: 20px;
       }
       
       .visual-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
       }
       
       .countdown-item {
-        min-width: 70px;
-        padding: 15px 10px;
+        min-width: 80px;
+        padding: 20px 15px;
       }
       
       .countdown-value {
-        font-size: 1.75rem;
+        font-size: 2rem;
       }
       
       .gallery-grid {
         grid-template-columns: 1fr;
       }
       
-      .executives-grid,
-      .judges-grid {
+      .gallery-item {
+        height: 220px;
+      }
+      
+      .executives-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .executive-card {
+        padding: 25px 20px;
+      }
+      
+      .executive-img {
+        width: 100px;
+        height: 100px;
       }
     }
 
     /* ========================
-       Utility Classes
+       UTILITY CLASSES
     ======================== */
     .fade-in {
       opacity: 0;
@@ -2005,23 +2062,22 @@
       transform: translateY(0);
     }
 
-    .gradient-text {
-      background: var(--hult-gradient);
+    .pink-gradient-text {
+      background: var(--pink-gradient);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
-    .shadow-hover {
-      transition: box-shadow var(--transition-base);
-    }
-
-    .shadow-hover:hover {
-      box-shadow: var(--shadow-xl);
+    .text-gradient {
+      background: var(--pink-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
 
     /* ========================
-       Touch Device Optimizations
+       TOUCH DEVICE OPTIMIZATIONS
     ======================== */
     @media (hover: none) and (pointer: coarse) {
       .visual-card:hover {
@@ -2056,16 +2112,21 @@
       .executive-link,
       .judge-link,
       .social-link {
-        min-height: 44px;
+        min-height: 48px;
       }
       
       .form-control {
-        min-height: 48px;
+        min-height: 52px;
+      }
+      
+      /* Remove hover effects on mobile */
+      .mobile-nav a:hover:before {
+        opacity: 0;
       }
     }
 
     /* ========================
-       Print Styles
+       PRINT STYLES
     ======================== */
     @media print {
       header {
@@ -2100,6 +2161,12 @@
       .footer-bottom {
         border-top: 1px solid #ccc;
         color: #666;
+      }
+      
+      /* Ensure proper contrast for printing */
+      h1, h2, h3 {
+        color: #000 !important;
+        background: none !important;
       }
     }
   </style>
@@ -2293,110 +2360,110 @@
   </section>
 
   <!-- Timeline Section -->
-<section id="timeline" class="section-bg">
-  <div class="container timeline-container">
-    <h2 class="text-center mb-2">The UNLIMITED Journey</h2>
-    <p class="text-center text-large mb-4" style="max-width: 700px; margin: 0 auto;">From idea to impact: Your roadmap to success in 5 phases</p>
-    
-    <div class="timeline">
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-date">Jan 15<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
-        <div class="timeline-content">
-          <div class="timeline-phase">Phase 1: Launch</div>
-          <h3 class="timeline-title">Orientation & Registration</h3>
-          <p class="timeline-description">Kickoff event introducing the UNLIMITED theme. Understand the competition format, meet potential teammates, and get inspired by past success stories.</p>
-          <div class="timeline-actions">
-            <a href="#" class="timeline-btn timeline-btn-primary">
-              <i class="fas fa-calendar-check"></i> Register Now
-            </a>
-            <a href="#" class="timeline-btn timeline-btn-secondary">
-              <i class="fas fa-info-circle"></i> Learn More
-            </a>
+  <section id="timeline" class="section-bg">
+    <div class="container timeline-container">
+      <h2 class="text-center mb-2">The UNLIMITED Journey</h2>
+      <p class="text-center text-large mb-4" style="max-width: 700px; margin: 0 auto;">From idea to impact: Your roadmap to success in 5 phases</p>
+      
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Jan 15<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Phase 1: Launch</div>
+            <h3 class="timeline-title">Orientation & Registration</h3>
+            <p class="timeline-description">Kickoff event introducing the UNLIMITED theme. Understand the competition format, meet potential teammates, and get inspired by past success stories.</p>
+            <div class="timeline-actions">
+              <a href="#" class="timeline-btn timeline-btn-primary">
+                <i class="fas fa-calendar-check"></i> Register Now
+              </a>
+              <a href="#" class="timeline-btn timeline-btn-secondary">
+                <i class="fas fa-info-circle"></i> Learn More
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Feb 5<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Phase 2: Skill Building</div>
+            <h3 class="timeline-title">Masterclass Series</h3>
+            <p class="timeline-description">Intensive workshops on social entrepreneurship, business modeling, pitch preparation, and UN SDGs. Get mentorship from industry experts and refine your idea.</p>
+            <div class="timeline-actions">
+              <a href="#" class="timeline-btn timeline-btn-primary">
+                <i class="fas fa-video"></i> Watch Recordings
+              </a>
+              <a href="#" class="timeline-btn timeline-btn-secondary">
+                <i class="fas fa-download"></i> Download Materials
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Feb 28<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Phase 3: Submission</div>
+            <h3 class="timeline-title">Proposal Deadline</h3>
+            <p class="timeline-description">Submit your comprehensive business proposal. Top 20 teams will be selected to advance to the semi-finals based on innovation, impact, and feasibility.</p>
+            <div class="timeline-actions">
+              <a href="#" class="timeline-btn timeline-btn-primary">
+                <i class="fas fa-paper-plane"></i> Submit Proposal
+              </a>
+              <a href="#" class="timeline-btn timeline-btn-secondary">
+                <i class="fas fa-file-alt"></i> View Guidelines
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Mar 10<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Phase 4: Semi-Finals</div>
+            <h3 class="timeline-title">Pitch Presentation</h3>
+            <p class="timeline-description">Present your refined pitch to a panel of expert judges. Top 5 teams will progress to the grand finale. Live Q&A session with judges.</p>
+            <div class="timeline-actions">
+              <a href="#" class="timeline-btn timeline-btn-primary">
+                <i class="fas fa-users"></i> Meet Judges
+              </a>
+              <a href="#" class="timeline-btn timeline-btn-secondary">
+                <i class="fas fa-microphone"></i> Pitch Tips
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="timeline-item fade-in">
+          <div class="timeline-marker"></div>
+          <div class="timeline-date">Mar 20<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
+          <div class="timeline-content">
+            <div class="timeline-phase">Phase 5: Grand Finale</div>
+            <h3 class="timeline-title">Campus Pitch Day</h3>
+            <p class="timeline-description">The ultimate pitch competition with campus leadership and special guests in attendance. Winners advance to regional and global stages for a chance at $1M.</p>
+            <div class="timeline-actions">
+              <a href="#" class="timeline-btn timeline-btn-primary">
+                <i class="fas fa-ticket-alt"></i> Get Tickets
+              </a>
+              <a href="#" class="timeline-btn timeline-btn-secondary">
+                <i class="fas fa-map-marked-alt"></i> View Venue
+              </a>
+            </div>
           </div>
         </div>
       </div>
       
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-date">Feb 5<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
-        <div class="timeline-content">
-          <div class="timeline-phase">Phase 2: Skill Building</div>
-          <h3 class="timeline-title">Masterclass Series</h3>
-          <p class="timeline-description">Intensive workshops on social entrepreneurship, business modeling, pitch preparation, and UN SDGs. Get mentorship from industry experts and refine your idea.</p>
-          <div class="timeline-actions">
-            <a href="#" class="timeline-btn timeline-btn-primary">
-              <i class="fas fa-video"></i> Watch Recordings
-            </a>
-            <a href="#" class="timeline-btn timeline-btn-secondary">
-              <i class="fas fa-download"></i> Download Materials
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-date">Feb 28<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
-        <div class="timeline-content">
-          <div class="timeline-phase">Phase 3: Submission</div>
-          <h3 class="timeline-title">Proposal Deadline</h3>
-          <p class="timeline-description">Submit your comprehensive business proposal. Top 20 teams will be selected to advance to the semi-finals based on innovation, impact, and feasibility.</p>
-          <div class="timeline-actions">
-            <a href="#" class="timeline-btn timeline-btn-primary">
-              <i class="fas fa-paper-plane"></i> Submit Proposal
-            </a>
-            <a href="#" class="timeline-btn timeline-btn-secondary">
-              <i class="fas fa-file-alt"></i> View Guidelines
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-date">Mar 10<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
-        <div class="timeline-content">
-          <div class="timeline-phase">Phase 4: Semi-Finals</div>
-          <h3 class="timeline-title">Pitch Presentation</h3>
-          <p class="timeline-description">Present your refined pitch to a panel of expert judges. Top 5 teams will progress to the grand finale. Live Q&A session with judges.</p>
-          <div class="timeline-actions">
-            <a href="#" class="timeline-btn timeline-btn-primary">
-              <i class="fas fa-users"></i> Meet Judges
-            </a>
-            <a href="#" class="timeline-btn timeline-btn-secondary">
-              <i class="fas fa-microphone"></i> Pitch Tips
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="timeline-item fade-in">
-        <div class="timeline-marker"></div>
-        <div class="timeline-date">Mar 20<br><span class="text-muted" style="font-size: 0.75rem;">2025</span></div>
-        <div class="timeline-content">
-          <div class="timeline-phase">Phase 5: Grand Finale</div>
-          <h3 class="timeline-title">Campus Pitch Day</h3>
-          <p class="timeline-description">The ultimate pitch competition with campus leadership and special guests in attendance. Winners advance to regional and global stages for a chance at $1M.</p>
-          <div class="timeline-actions">
-            <a href="#" class="timeline-btn timeline-btn-primary">
-              <i class="fas fa-ticket-alt"></i> Get Tickets
-            </a>
-            <a href="#" class="timeline-btn timeline-btn-secondary">
-              <i class="fas fa-map-marked-alt"></i> View Venue
-            </a>
-          </div>
-        </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-secondary">
+          <i class="fas fa-download"></i> Download Complete Schedule
+        </a>
       </div>
     </div>
-    
-    <div class="text-center mt-4">
-      <a href="#" class="btn btn-secondary">
-        <i class="fas fa-download"></i> Download Complete Schedule
-      </a>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Gallery Section -->
   <section id="gallery" class="gallery-section section-bg">
@@ -2440,293 +2507,296 @@
     </div>
   </section>
 
-    <!-- Executives Section -->
-    <section id="executives">
+  <!-- Executives Section -->
+  <section id="executives">
     <div class="container">
-        <h2 class="text-center mb-2">Meet Our Leadership Team</h2>
-        <p class="text-center text-large mb-4" style="max-width: 700px; margin: 0 auto;">The passionate students driving Hult Prize LAUTECH 2025 UNLIMITED edition</p>
-        
-        <div class="executives-grid">
+      <h2 class="text-center mb-2">Meet Our Leadership Team</h2>
+      <p class="text-center text-large mb-4" style="max-width: 700px; margin: 0 auto;">The passionate students driving Hult Prize LAUTECH 2025 UNLIMITED edition</p>
+      
+      <div class="executives-grid">
         <!-- Olasunkanmi Oyewusi - Campus Director -->
         <div class="executive-card fade-in">
-            <img src="images/sunkanmi.jpg" alt="Olasunkanmi Oyewusi" class="executive-img" loading="lazy">
-            <h3>Olasunkanmi Oyewusi</h3>
-            <div class="executive-role">Campus Director</div>
-            <p class="text-muted">Mechanical Engineering</p>
-            <div class="executive-links">
+          <img src="images/sunkanmi.jpg" alt="Olasunkanmi Oyewusi" class="executive-img" loading="lazy">
+          <h3>Olasunkanmi Oyewusi</h3>
+          <div class="executive-role">Campus Director</div>
+          <p class="text-muted">Mechanical Engineering</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/olasunkanmi-oyewusi" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/olasunkanmioyewusi" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Olurinto Daniel Boluwatife - Deputy Campus Director -->
         <div class="executive-card fade-in">
-            <img src="images/bolu.jpg" alt="Olurinto Daniel Boluwatife" class="executive-img" loading="lazy">
-            <h3>Olurinto Daniel Boluwatife</h3>
-            <div class="executive-role">Deputy Campus Director</div>
-            <p class="text-muted">Mechanical Engineering</p>
-            <div class="executive-links">
+          <img src="images/bolu.jpg" alt="Olurinto Daniel Boluwatife" class="executive-img" loading="lazy">
+          <h3>Olurinto Daniel Boluwatife</h3>
+          <div class="executive-role">Deputy Campus Director</div>
+          <p class="text-muted">Mechanical Engineering</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/boluwatife-olurinto-2b4843334" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/designwithtife" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Idowu Oluwatosin - Deputy Campus Director, Iseyin Campus -->
         <div class="executive-card fade-in">
-            <img src="images/tosin.jpg" alt="Idowu Oluwatosin" class="executive-img" loading="lazy">
-            <h3>Idowu Oluwatosin</h3>
-            <div class="executive-role">Deputy Campus Director, Iseyin Campus</div>
-            <p class="text-muted">Crop Production & Soil Science</p>
-            <div class="executive-links">
+          <img src="images/tosin.jpg" alt="Idowu Oluwatosin" class="executive-img" loading="lazy">
+          <h3>Idowu Oluwatosin</h3>
+          <div class="executive-role">Deputy Campus Director, Iseyin Campus</div>
+          <p class="text-muted">Crop Production & Soil Science</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/oluwatosin-idowu-11b8221b3" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:idowuoluwatosin242@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Iminsioluwa Adedunmoye - Event Planning & Management -->
         <div class="executive-card fade-in">
-            <img src="images/imisi.JPG" alt="Iminsioluwa Adedunmoye" class="executive-img" loading="lazy">
-            <h3>Iminsioluwa Adedunmoye</h3>
-            <div class="executive-role">Event Planning & Management Lead</div>
-            <p class="text-muted">Cyber Security Science</p>
-            <div class="executive-links">
+          <img src="images/imisi.JPG" alt="Iminsioluwa Adedunmoye" class="executive-img" loading="lazy">
+          <h3>Iminsioluwa Adedunmoye</h3>
+          <div class="executive-role">Event Planning & Management Lead</div>
+          <p class="text-muted">Cyber Security Science</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/adedunmoye-iminsioluwa-225788318" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/iminsioluwa_" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="https://twitter.com/Iminsioluw53959" target="_blank" class="executive-link" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
+              <i class="fab fa-twitter"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- El-Ameen Falana - Sponsorship and Partnerships -->
         <div class="executive-card fade-in">
-            <img src="images/ameen.jpg" alt="El-Ameen Falana" class="executive-img" loading="lazy">
-            <h3>El-Ameen Falana</h3>
-            <div class="executive-role">Sponsorship & Partnerships Lead</div>
-            <p class="text-muted">Medicine</p>
-            <div class="executive-links">
+          <img src="images/ameen.jpg" alt="El-Ameen Falana" class="executive-img" loading="lazy">
+          <h3>El-Ameen Falana</h3>
+          <div class="executive-role">Sponsorship & Partnerships Lead</div>
+          <p class="text-muted">Medicine</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/el-ameen-falana-638bb1222" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:Falanaelameen9@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Adediji Blessing - Welfare -->
         <div class="executive-card fade-in">
-            <img src="images/blessing.jpg" alt="Adediji Blessing" class="executive-img" loading="lazy">
-            <h3>Adediji Blessing</h3>
-            <div class="executive-role">Welfare Lead</div>
-            <p class="text-muted">Medicine & Surgery</p>
-            <div class="executive-links">
+          <img src="images/blessing.jpg" alt="Adediji Blessing" class="executive-img" loading="lazy">
+          <h3>Adediji Blessing</h3>
+          <div class="executive-role">Welfare Lead</div>
+          <p class="text-muted">Medicine & Surgery</p>
+          <div class="executive-links">
             <a href="https://www.instagram.com/blessdeen" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="https://twitter.com/Adedijiblessin9" target="_blank" class="executive-link" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
+              <i class="fab fa-twitter"></i>
             </a>
             <a href="mailto:blessingadediji123@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Elishama Toluwani Abioye - Logistics -->
         <div class="executive-card fade-in">
-            <img src="images/shamaro.jpg" alt="Elishama Toluwani Abioye" class="executive-img" loading="lazy">
-            <h3>Elishama Toluwani Abioye</h3>
-            <div class="executive-role">Logistics Lead</div>
-            <p class="text-muted">Medicine & Surgery</p>
-            <div class="executive-links">
+          <img src="images/shamaro.jpg" alt="Elishama Toluwani Abioye" class="executive-img" loading="lazy">
+          <h3>Elishama Toluwani Abioye</h3>
+          <div class="executive-role">Logistics Lead</div>
+          <p class="text-muted">Medicine & Surgery</p>
+          <div class="executive-links">
             <a href="https://www.instagram.com/shamaro06" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="https://www.linkedin.com/in/elishama-toluwani-abioye" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:toluwanielishama@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Ebunoluwa Olufayo - Social Media Management & Publicity -->
         <div class="executive-card fade-in">
-            <img src="images/ebun.jpg" alt="Ebunoluwa Olufayo" class="executive-img" loading="lazy">
-            <h3>Ebunoluwa Olufayo</h3>
-            <div class="executive-role">Social Media & Publicity Lead</div>
-            <p class="text-muted">Nursing</p>
-            <div class="executive-links">
+          <img src="images/ebun.jpg" alt="Ebunoluwa Olufayo" class="executive-img" loading="lazy">
+          <h3>Ebunoluwa Olufayo</h3>
+          <div class="executive-role">Social Media & Publicity Lead</div>
+          <p class="text-muted">Nursing</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/ebunoluwaolufayo" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/ebunoluwaolufayo" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="mailto:ebunoluwaolufayo@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Glory Adeyinka - Judges & Experts Support -->
         <div class="executive-card fade-in">
-            <img src="images/yinka.jpg" alt="Glory Adeyinka" class="executive-img" loading="lazy">
-            <h3>Glory Adeyinka</h3>
-            <div class="executive-role">Judges & Experts Support Lead</div>
-            <p class="text-muted">Anatomy</p>
-            <div class="executive-links">
+          <img src="images/yinka.jpg" alt="Glory Adeyinka" class="executive-img" loading="lazy">
+          <h3>Glory Adeyinka</h3>
+          <div class="executive-role">Judges & Experts Support Lead</div>
+          <p class="text-muted">Anatomy</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/adeyinka-glory-28404a262" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/adeyinkaglory" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="mailto:adeyinkaglory21@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Ayodele Victor - Branding -->
         <div class="executive-card fade-in">
-            <img src="images/victor.jpg" alt="Ayodele Victor" class="executive-img" loading="lazy">
-            <h3>Ayodele Victor</h3>
-            <div class="executive-role">Branding Lead</div>
-            <p class="text-muted">Mechanical Engineering</p>
-            <div class="executive-links">
+          <img src="images/victor.jpg" alt="Ayodele Victor" class="executive-img" loading="lazy">
+          <h3>Ayodele Victor</h3>
+          <div class="executive-role">Branding Lead</div>
+          <p class="text-muted">Mechanical Engineering</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/ayodele-victor-097b64260" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="https://www.instagram.com/victors_pixel" target="_blank" class="executive-link" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
+              <i class="fab fa-instagram"></i>
             </a>
             <a href="mailto:ayodelev363@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Olaniyi Joseph Oluwasegun - Start-up Team Lead -->
         <div class="executive-card fade-in">
-            <img src="https://ui-avatars.com/api/?name=Olaniyi+Joseph&background=381B5A&color=fff&size=120&bold=true" alt="Olaniyi Joseph Oluwasegun" class="executive-img" loading="lazy">
-            <h3>Olaniyi Joseph Oluwasegun</h3>
-            <div class="executive-role">Start-up Team Lead</div>
-            <p class="text-muted">Cyber Security Science</p>
-            <div class="executive-links">
+          <img src="https://ui-avatars.com/api/?name=Olaniyi+Joseph&background=381B5A&color=fff&size=120&bold=true" alt="Olaniyi Joseph Oluwasegun" class="executive-img" loading="lazy">
+          <h3>Olaniyi Joseph Oluwasegun</h3>
+          <div class="executive-role">Start-up Team Lead</div>
+          <p class="text-muted">Cyber Security Science</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/olaniyi-joseph-360209235" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:joolaniyi1@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Ige Toyeeba - Community Management -->
         <div class="executive-card fade-in">
-            <img src="images/toyeebah.jpg" alt="Ige Toyeeba" class="executive-img" loading="lazy">
-            <h3>Ige Toyeebah</h3>
-            <div class="executive-role">Community Management Lead</div>
-            <p class="text-muted">Medicine & Surgery</p>
-            <div class="executive-links">
+          <img src="images/toyeebah.jpg" alt="Ige Toyeeba" class="executive-img" loading="lazy">
+          <h3>Ige Toyeebah</h3>
+          <div class="executive-role">Community Management Lead</div>
+          <p class="text-muted">Medicine & Surgery</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/toyeebah-ige-851434211" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:igetoyyiba8@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
         
         <!-- Adewole Blessing - Registration -->
         <div class="executive-card fade-in">
-            <img src="https://ui-avatars.com/api/?name=Adewole+Blessing&background=381B5A&color=fff&size=120&bold=true" alt="Adewole Blessing" class="executive-img" loading="lazy">
-            <h3>Adewole Blessing</h3>
-            <div class="executive-role">Registration Lead</div>
-            <p class="text-muted">Biochemistry</p>
-            <div class="executive-links">
+          <img src="https://ui-avatars.com/api/?name=Adewole+Blessing&background=381B5A&color=fff&size=120&bold=true" alt="Adewole Blessing" class="executive-img" loading="lazy">
+          <h3>Adewole Blessing</h3>
+          <div class="executive-role">Registration Lead</div>
+          <p class="text-muted">Biochemistry</p>
+          <div class="executive-links">
             <a href="https://www.linkedin.com/in/blessing-adewole" target="_blank" class="executive-link" aria-label="LinkedIn">
-                <i class="fab fa-linkedin-in"></i>
+              <i class="fab fa-linkedin-in"></i>
             </a>
             <a href="mailto:adewoleblessing18@gmail.com" class="executive-link" aria-label="Email">
-                <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope"></i>
             </a>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
   <!-- Judges Section -->
-  <!-- <section id="judges" class="section-bg">
+  <section id="judges" class="section-bg">
     <div class="container">
       <h2 class="text-center mb-2">Meet Our Distinguished Judges</h2>
       <p class="text-center text-large mb-4" style="max-width: 700px; margin: 0 auto;">Industry leaders and experts who will evaluate your ideas</p>
       
-      <div class="judges-grid">
-        <div class="judge-card fade-in">
-          <img src="" alt="Olubunmi Sobande" class="judge-img" loading="lazy">
+      <div class="executives-grid">
+        <div class="executive-card fade-in">
+          <img src="" alt="Olubunmi Sobande" class="executive-img" loading="lazy">
           <h3>Olubunmi Sobande</h3>
-          <p class="text-muted">Director, Social Impact at Tech Giants Inc.</p>
-          <div class="judge-links">
-            <a href="#" class="judge-link" aria-label="LinkedIn">
+          <div class="executive-role">Director, Social Impact at Tech Giants Inc.</div>
+          <p class="text-muted">Social Impact Expert</p>
+          <div class="executive-links">
+            <a href="#" class="executive-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="judge-link" aria-label="Twitter">
+            <a href="#" class="executive-link" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
           </div>
         </div>
         
-        <div class="judge-card fade-in">
-          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ifeoma Nwogbu" class="judge-img" loading="lazy">
+        <div class="executive-card fade-in">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Ifeoma Nwogbu" class="executive-img" loading="lazy">
           <h3>Ifeoma Nwogbu</h3>
-          <p class="text-muted">Founder, Green Solutions Africa</p>
-          <div class="judge-links">
-            <a href="#" class="judge-link" aria-label="LinkedIn">
+          <div class="executive-role">Founder, Green Solutions Africa</div>
+          <p class="text-muted">Sustainability Entrepreneur</p>
+          <div class="executive-links">
+            <a href="#" class="executive-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="judge-link" aria-label="Twitter">
+            <a href="#" class="executive-link" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
           </div>
         </div>
         
-        <div class="judge-card fade-in">
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Dr. Adekunle Johnson" class="judge-img" loading="lazy">
+        <div class="executive-card fade-in">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Dr. Adekunle Johnson" class="executive-img" loading="lazy">
           <h3>Dr. Adekunle Johnson</h3>
-          <p class="text-muted">Professor of Entrepreneurship, LAUTECH</p>
-          <div class="judge-links">
-            <a href="#" class="judge-link" aria-label="LinkedIn">
+          <div class="executive-role">Professor of Entrepreneurship, LAUTECH</div>
+          <p class="text-muted">Academic & Mentor</p>
+          <div class="executive-links">
+            <a href="#" class="executive-link" aria-label="LinkedIn">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="judge-link" aria-label="Twitter">
+            <a href="#" class="executive-link" aria-label="Twitter">
               <i class="fab fa-twitter"></i>
             </a>
           </div>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- FAQ Section -->
   <section id="faq">
@@ -3013,7 +3083,7 @@
 
   <script>
     // ======================
-    // Responsive JavaScript
+    // RESPONSIVE JAVASCRIPT
     // ======================
 
     // DOM Elements
@@ -3046,14 +3116,12 @@
     window.addEventListener('scroll', () => {
       const currentScroll = window.pageYOffset;
       
-      // Add/remove scrolled class
       if (currentScroll > 50) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
       }
       
-      // Hide/show header on scroll (desktop only)
       if (window.innerWidth > 768) {
         if (currentScroll > lastScroll && currentScroll > 100) {
           header.style.transform = 'translateY(-100%)';
@@ -3062,9 +3130,7 @@
         }
       }
       
-      // Update active nav link
       updateActiveNavLink();
-      
       lastScroll = currentScroll;
     });
 
@@ -3278,7 +3344,7 @@
             <div style="width: 60px; height: 60px; background: #00D4AA; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
               <i class="fas fa-check" style="color: white; font-size: 24px;"></i>
             </div>
-            <h3 style="color: var(--hult-deep); margin-bottom: 10px;">Registration Successful!</h3>
+            <h3 style="color: var(--primary-pink); margin-bottom: 10px;">Registration Successful!</h3>
             <p style="color: var(--text-secondary); margin-bottom: 20px;">We've sent a confirmation email with next steps. Good luck with your UNLIMITED journey!</p>
             <button class="btn btn-primary" onclick="closeModal()" style="margin-top: 10px;">Continue</button>
           </div>
@@ -3297,11 +3363,11 @@
 
     // Event Countdown timer (to March 20, 2025)
     const updateCountdown = () => {
-      const targetDate = new Date('March 20, 2025 09:00:00').getTime();
-      const now = new Date().getTime();
-      const timeLeft = targetDate - now;
-      
-      if (timeLeft > 0) {
+    const targetDate = new Date('March 20, 2025 09:00:00').getTime();
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
+    
+    if (timeLeft > 0) {
         const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
         const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
@@ -3314,20 +3380,19 @@
         
         // Add animation to changing numbers
         if (seconds === 59) {
-          countdownSeconds.style.transform = 'scale(1.1)';
-          setTimeout(() => countdownSeconds.style.transform = 'scale(1)', 200);
+        countdownSeconds.style.transform = 'scale(1.1)';
+        setTimeout(() => countdownSeconds.style.transform = 'scale(1)', 200);
         }
-      } else {
+    } else {
         countdownDays.textContent = '00';
         countdownHours.textContent = '00';
         countdownMinutes.textContent = '00';
         countdownSeconds.textContent = '00';
-      }
+    }
     };
-    
+
     updateCountdown();
     setInterval(updateCountdown, 1000);
-
     // FAQ accordion
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question');
@@ -3384,7 +3449,7 @@
         tooltip.textContent = this.getAttribute('aria-label');
         tooltip.style.cssText = `
           position: absolute;
-          background: var(--hult-deep);
+          background: var(--primary-pink);
           color: white;
           padding: 4px 8px;
           border-radius: 4px;
@@ -3432,6 +3497,9 @@
         imageObserver.observe(img);
       });
     }
+
+    // Initialize
+    updateActiveNavLink();
   </script>
 </body>
 </html>
